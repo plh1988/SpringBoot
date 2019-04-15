@@ -46,4 +46,19 @@ public class Node {
 			childrenNodes.add(node);
 		}
 	}
+
+	@Override
+	public String toString() {
+		return this.id+" "+this.name;
+	}
+	
+	public Node getChildNode(int id) {
+		for(Node n:this.childrenNodes) {
+			if(n.id ==id) {
+				return n;
+			}
+		}
+		return null;
+	}
+	
 }
